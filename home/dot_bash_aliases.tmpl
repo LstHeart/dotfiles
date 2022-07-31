@@ -13,48 +13,48 @@
 #   exec "${shell}"
 # ); }
 
-mcd() { (
-  set -e
+# mcd() { (
+#   set -e
 
-  local dir="$1"
+#   local dir="$1"
 
-  mkdir -p "${dir}"
-  cd "${dir}"
-); }
+#   mkdir -p "${dir}"
+#   cd "${dir}"
+# ); }
 
-cdr() {
-  cd "${HOME}/repos"
-}
+# cdr() {
+#   cd "${HOME}/repos"
+# }
 
-# See: https://github.com/twpayne/chezmoi/issues/854#issuecomment-675160348
-chezmoi-re-run-scripts() { (
-  set -ex
+# # See: https://github.com/twpayne/chezmoi/issues/854#issuecomment-675160348
+# chezmoi-re-run-scripts() { (
+#   set -ex
 
-  rm -f "${HOME}/.config/chezmoi/chezmoistate.boltdb"
-  chezmoi init --apply
-); }
+#   rm -f "${HOME}/.config/chezmoi/chezmoistate.boltdb"
+#   chezmoi init --apply
+# ); }
 
-# {{ if .is_wsl }}
-gsudo() { (
-  set -e
+# # {{ if .is_wsl }}
+# gsudo() { (
+#   set -e
 
-  local shell
-  shell=$(ps -p $$ -ocomm=)
+#   local shell
+#   shell=$(ps -p $$ -ocomm=)
 
-  gsudo.exe wsl -d "${WSL_DISTRO_NAME?}" -e "${shell}" "-c" "$*"
-); }
+#   gsudo.exe wsl -d "${WSL_DISTRO_NAME?}" -e "${shell}" "-c" "$*"
+# ); }
 
-cdw() { (
-  set -e
+# cdw() { (
+#   set -e
 
-  local user_profile
-  user_profile=$(wslvar USERPROFILE)
-  local win_home
-  win_home=$(wslpath "${user_profile}")
+#   local user_profile
+#   user_profile=$(wslvar USERPROFILE)
+#   local win_home
+#   win_home=$(wslpath "${user_profile}")
 
-  cd "${win_home}"
-); }
-# {{ end }}
+#   cd "${win_home}"
+# ); }
+# # {{ end }}
 
 # git alias
 alias g="git"
