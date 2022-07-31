@@ -7,9 +7,15 @@
 !.chezmoiscripts/*-final-message.sh
 # ignore more files
 .oh-my-zsh/**/*
+.volta
 .volta/**/*
 .p10k.zsh
 .zshrc
+.sdkman
+.sdkman/**/*
+.kube
+.local/bin/kubectx
+.local/bin/kubens
 {{- end }}
 
 {{ if not .is_gnome -}}
