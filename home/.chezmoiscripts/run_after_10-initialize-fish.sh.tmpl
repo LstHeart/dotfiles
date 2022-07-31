@@ -8,7 +8,7 @@ true || source ../.chezmoitemplates/scripts-library
 fish_path="/home/linuxbrew/.linuxbrew/bin/fish"
 
 if ! getent passwd '{{ .chezmoi.username }}' | cut -d : -f 7- | grep -q "^${fish_path}$"; then
-  log_task "Configuring ZSH as default shell"
+  log_task "Configuring Fish as default shell"
 
   c sudo usermod --shell "${fish_path}" '{{ .chezmoi.username }}'
 fi
