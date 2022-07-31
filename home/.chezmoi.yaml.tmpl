@@ -1,3 +1,5 @@
+{{- $name := (env "GITHUB_USER") -}}
+{{- $email := "dennis.lstheart@qq.com" -}}
 {{- $chezmoiForce := or (has "--force" .chezmoi.args) (has "--force=true" .chezmoi.args) -}}
 {{- $interactive := and stdinIsATTY (not $chezmoiForce) -}}
 
@@ -13,7 +15,6 @@
 {{- else -}}
 {{- $name := "Dennis" -}}
 {{- end -}}
-{{- $email := "dennis.lstheart@qq.com" -}}
 
 {{- if hasKey . "name" -}}
 {{-   $name = .name -}}
