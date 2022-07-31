@@ -72,7 +72,7 @@
     "**/home/**/modify_*": "shellscript",
     "*.yaml.tmpl": "helm",
     ".chezmoi*.yaml": "helm",
-    ".chezmoiignore": "helm",
+    ".chezmoiignore": "hlsl",
     ".chezmoiremove": "helm",
     "**/.chezmoitemplates/*": "helm",
     "**/.chezmoitemplates/*-library": "shellscript"

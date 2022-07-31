@@ -1,6 +1,3 @@
-{{- $name := "Dennis" -}}
-{{- $email := "dennis.lstheart@qq.com" -}}
-
 {{- $chezmoiForce := or (has "--force" .chezmoi.args) (has "--force=true" .chezmoi.args) -}}
 {{- $interactive := and stdinIsATTY (not $chezmoiForce) -}}
 
@@ -10,6 +7,13 @@
 {{- $gnome := lookPath "gnome-shell" | not | not -}}
 
 {{- $minimum := or $devcontainer (not $ubuntu) -}}
+
+{{- if .is_devcontainer -}}
+{{- $name := "vscode" -}}
+{{- else -}}
+{{- $name := "Dennis" -}}
+{{- end -}}
+{{- $email := "dennis.lstheart@qq.com" -}}
 
 {{- if hasKey . "name" -}}
 {{-   $name = .name -}}

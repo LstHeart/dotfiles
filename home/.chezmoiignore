@@ -3,11 +3,13 @@
 
 .chezmoiscripts/*
 !.chezmoiscripts/*-install-prerequisites.sh
-!.chezmoiscripts/*-initialize-zsh.sh
+!.chezmoiscripts/*-initialize-fish.sh
 !.chezmoiscripts/*-final-message.sh
 # ignore more files
 .oh-my-zsh/**/*
 .volta/**/*
+.p10k.zsh
+.zshrc
 {{- end }}
 
 {{ if not .is_gnome -}}
