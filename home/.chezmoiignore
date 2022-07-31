@@ -23,3 +23,6 @@
 # https://github.com/twpayne/chezmoi/issues/1421#issuecomment-964473844
 .oh-my-zsh/cache/*
 **/*.zwc
+
+# ignore files
+.oh-my-zsh
