@@ -75,6 +75,7 @@
     ".chezmoiignore": "hlsl",
     ".chezmoiremove": "helm",
     "**/.chezmoitemplates/*": "helm",
-    "**/.chezmoitemplates/*-library": "shellscript"
+    "**/.chezmoitemplates/*-library": "shellscript",
+    "**.fish": "fish"
   }
 }
