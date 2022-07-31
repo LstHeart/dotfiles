@@ -25,4 +25,4 @@
 **/*.zwc
 
 # ignore files
-.oh-my-zsh/*
+.oh-my-zsh/**/*
