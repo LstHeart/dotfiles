@@ -3,7 +3,7 @@
 
 .chezmoiscripts/*
 !.chezmoiscripts/*-install-prerequisites.sh
-!.chezmoiscripts/*-initialize-fish.sh
+#!.chezmoiscripts/*-initialize-fish.sh
 !.chezmoiscripts/*-final-message.sh
 # ignore more files
 .oh-my-zsh/**/*
