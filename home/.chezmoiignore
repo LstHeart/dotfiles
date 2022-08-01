@@ -1,0 +1,12 @@
+{{- if .is_devcontainer -}}
+
+{{- end -}}
+
+{{- if .is_windows -}}
+
+{{- end -}}
+
+{{ if not .is_wsl -}}
+.chezmoiscripts-sync-wsl-ssh-keys.sh
+
+{{- end }}
