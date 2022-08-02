@@ -91,3 +91,6 @@ data:
 encryption: "gpg"
 gpg:
   recipient: "{{ $gituser }}"
+merge:
+  command: "code"
+  args: ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
